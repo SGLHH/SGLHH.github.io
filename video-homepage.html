@@ -83,7 +83,9 @@
                 <span class="video-homepage-nav5">Sign In</span>
               </nav>
               <div class="video-homepage-buttons">
-                <button class="video-homepage-register button">Log Out</button>
+                <button class="video-homepage-register button"><a href="index.html">
+                  Log Out
+                </a></button>
               </div>
               <img
                 src="public/image-200h.png"
@@ -293,9 +295,24 @@
         </div>
       </div>
     </div>
-    <script
-      data-section-id="navbar"
-      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
-    ></script>
+    <script>
+      function changeImage(imageElement) {
+        if (imageElement.src.includes("public/add%20to%20watchlist-200h.png")) {
+          imageElement.src = "public/Added%20to%20watchlist.png";
+        } else {
+          imageElement.src = "public/add%20to%20watchlist-200h.png";
+        }
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        var imageElements = document.querySelectorAll(
+                ".video-homepage-image2, .video-homepage-image4, .video-homepage-image6"
+        );
+        imageElements.forEach(function (imageElement) {
+          imageElement.addEventListener("click", function () {
+            changeImage(imageElement);
+          });
+        });
+      });
+    </script>
   </body>
 </html>

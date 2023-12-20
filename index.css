@@ -1256,7 +1256,7 @@
   border: 2px dashed rgba(120, 120, 120, 0.4);
   display: flex;
   justify-content: center;
-  background-color: 232323;
+  background-color: #232323;
 }
 @media(max-width: 1200px) {
   .home-hero-button1 {
